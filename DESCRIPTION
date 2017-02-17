@@ -1,7 +1,5 @@
 Title: Walmart Instore deal catcher
-License: MIT
+License: GNU General Public License
 DisplayMode: Normal
-Author: Joe Cheng <joe@rstudio.com>
-AuthorUrl: http://www.rstudio.com/
+Author: Md Rubayet Mortuza
 Type: Shiny
-Tags: leaflet selectize datatables absolutepanel
