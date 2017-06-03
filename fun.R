@@ -8,9 +8,9 @@ getNearestStores<-function(x){
   if(is.null(x)||!nzchar(x)){x=99354}
     if(is.character(x)){
       x = gsub("\\s+","",x)
-      store_finder_url<-paste("http://api.walmartlabs.com/v1/stores?apiKey=hmz6gruuzam3wbaacgh76gju&city=",x,"&format=json",sep="")
+      store_finder_url<-paste("http://api.walmartlabs.com/v1/stores?apiKey=&city=",x,"&format=json",sep="")
     }else{
-      store_finder_url<-paste("http://api.walmartlabs.com/v1/stores?apiKey=hmz6gruuzam3wbaacgh76gju&zip=",x,"&format=json",sep="") 
+      store_finder_url<-paste("http://api.walmartlabs.com/v1/stores?apiKey=&zip=",x,"&format=json",sep="") 
     }
   store_txt=read_html(store_finder_url)%>% html_text()
   store=as.data.frame(regmatches(store_txt, gregexpr("(?<=,\"name\":\").*?(?=\")", store_txt, perl=TRUE)))
